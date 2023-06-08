@@ -56,21 +56,21 @@ public class RegistrationApplication extends SpringBootServletInitializer {
 		return builder.sources(RegistrationApplication.class);
 	}
 
-	@Bean
-	public EurekaInstanceConfigBean eurekaInstanceConfig(InetUtils inetUtils) {
-
-		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
-		String ip = null;
-		try {
-			ip = InetAddress.getLocalHost().getHostAddress();
-
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		}
-
-		config.setIpAddress(ip);
-		config.setPreferIpAddress(true);
-
-		return config;
-	}
+//	@Bean
+//	public EurekaInstanceConfigBean eurekaInstanceConfig(InetUtils inetUtils) {
+//
+//		EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
+//		String ip = null;
+//		try {
+//			ip = InetAddress.getLocalHost().getHostAddress();
+//
+//		} catch (UnknownHostException e) {
+//			e.printStackTrace();
+//		}
+//
+//		config.setIpAddress(ip);
+////		config.setPreferIpAddress(true);
+//
+//		return config;
+//	}
 }
